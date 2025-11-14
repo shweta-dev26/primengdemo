@@ -1,117 +1,98 @@
-<!-- <div class="container">
-      <div class="top-section">
-        <div class="text">
-          <h2>Top Section</h2>
-          <p>Some content here...</p>
-        </div>
-        <div class="images">
-          <p-image src="assets/img1.jpg" [style.width.px]="100" [style.height.px]="100"></p-image>
-          <p-image #secondImage src="assets/img2.jpg" [style.width.px]="100" [style.height.px]="100"
-                   [class.move-to-bottom]="moveImage"></p-image>
-          
-          <p-image src="assets/img3.jpg" [style.width.px]="100" [style.height.px]="100"></p-image>
-        </div>
-      </div>
-      <div #bottomPara class="bottom-section">
-        <p>Bottom paragraph: scroll here to animate second image down</p>
-        <div class="bottom-placeholder">
-          <p-image *ngIf="moveImage" src="assets/img2.jpg" [style.width.px]="100" [style.height.px]="100"></p-image>
-        </div>
-      </div>
-    </div> -->
+<div class="main-content">
+  <section class="about-us">
+    <div class="about-text" pAnimateOnScroll
+      enterClass="animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000"
+      leaveClass="animate-leave fade-out-0">
+      <h1>About Us</h1>
+      <p>
+        A pivotal moment in 2010 ignited my journey toward revolutionizing convenience store management. Tasked with
+        evaluating operations for a C-store network, I unearthed a stark reality: entrenched in outdated manual
+        processes, operations were draining valuable time and resources.
+      </p>
+      <p> Determined to confront this challenge head-on, I delved deeper, uncovering issues such as unauthorized fuel
+        deliveries and financial inconsistencies. It became abundantly clear that the status quo was no longer
+        sustainable.
+      </p>
+    </div>
 
-     <div class="main-content">
-      <!-- About Us Section -->
-      <section class="about-us">
-        <div class="about-text" pAnimateOnScroll  enterClass="animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000"
-            leaveClass="animate-leave fade-out-0">
-          <h1>About Us</h1>
-          <p>
-           A pivotal moment in 2010 ignited my journey toward revolutionizing convenience store management. Tasked with evaluating operations for a C-store network, I unearthed a stark reality: entrenched in outdated manual processes, operations were draining valuable time and resources.
-          </p>
-          <p> Determined to confront this challenge head-on, I delved deeper, uncovering issues such as unauthorized fuel deliveries and financial inconsistencies. It became abundantly clear that the status quo was no longer sustainable.
-          </p>
-        </div>
+    <div class="image-collage" pAnimateOnScroll
+      enterClass="animate-enter fade-in-10 slide-in-from-r-8 animate-duration-1000"
+      leaveClass="animate-leave fade-out-0">
+      <img src="assets/img4.png" alt="Main" class="main-image" />
+      <img src="assets/img1.jpg" alt="Small 1" class="small-image top-right" />
+      <img src="assets/img2.jpg" alt="Small 2" class="small-image bottom-left" />
+      <img src="assets/img3.jpg" alt="Small 3" class="small-image bottom-right" />
+    </div>
+  </section>
+  <section class="mission" pAnimateOnScroll enterClass="animate-enter fade-in-10 animate-duration-1000"
+    leaveClass="animate-leave fade-out-0">
+    <div class="ourmission-section" pAnimateOnScroll
+      enterClass="animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000"
+      leaveClass="animate-leave fade-out-0">
+      <img src="assets/img4.png" alt="Mission" class="mission-image" />
+    </div>
 
-        <div class="image-collage"     pAnimateOnScroll
-            enterClass="animate-enter fade-in-10 slide-in-from-r-8 animate-duration-1000"
-            leaveClass="animate-leave fade-out-0">
-          <img src="assets/img4.png" alt="Main" class="main-image" />
-          <img src="assets/img1.jpg" alt="Small 1" class="small-image top-right" />
-          <img src="assets/img2.jpg" alt="Small 2" class="small-image bottom-left" />
-          <img src="assets/img3.jpg" alt="Small 3" class="small-image bottom-right" />
-        </div>
-      </section>
+    <div class="mission-text" pAnimateOnScroll
+      enterClass="animate-enter fade-in-10 slide-in-from-r-8 animate-duration-1000"
+      leaveClass="animate-leave fade-out-0">
+      <h2>Our Mission: Helping Millions of Organizations Grow Better</h2>
+      <p>
+        We believe not just in growing bigger, but in growing better. And growing better means aligning the success of
+        your own business with the success of your customers. Win-win!
+      </p>
+    </div>
 
-      <!-- Mission Section -->
-      <section class="mission"  pAnimateOnScroll
-            enterClass="animate-enter fade-in-10 animate-duration-1000"
-            leaveClass="animate-leave fade-out-0">
-        <div class="ourmission-section" pAnimateOnScroll
-            enterClass="animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000"
-            leaveClass="animate-leave fade-out-0">
-              <img src="assets/img4.png" alt="Mission" class="mission-image" />
-            </div>
-      
-        <div class="mission-text"  pAnimateOnScroll
-            enterClass="animate-enter fade-in-10 slide-in-from-r-8 animate-duration-1000"
-            leaveClass="animate-leave fade-out-0">
-          <h2>Our Mission: Helping Millions of Organizations Grow Better</h2>
-          <p>
-            We believe not just in growing bigger, but in growing better. And growing better means aligning the success of your own business with the success of your customers. Win-win!
-          </p>
-        </div>
-        
-      </section>
-   
-<section class="neon-section">
-  <div class="neon-border" pAnimateOnScroll enterClass="animate-enter fade-in-10 slide-in-from-t-20 animate-duration-1000">
+  </section>
 
- <p-accordion value="0" class="custom-accordion">
-    <p-accordion-panel value="0">
-        <p-accordion-header>🚀 Our Mission</p-accordion-header>
-        <p-accordion-content>
+  <section class="neon-section">
+    <div class="neon-border" pAnimateOnScroll
+      enterClass="animate-enter fade-in-10 slide-in-from-t-20 animate-duration-1000">
+
+      <p-accordion value="0" class="custom-accordion">
+        <p-accordion-panel value="0">
+          <p-accordion-header>🚀 Our Mission</p-accordion-header>
+          <p-accordion-content>
             <p class="m-0">
               Our mission is to build meaningful digital experiences that empower businesses to grow and connect
-        with their audiences. We believe technology should simplify life, not complicate it — and every solution
-        we create is designed with people at the center.  
-        <br><br>
-        From concept to launch, our focus is on usability, accessibility, and sustainability. We aim to deliver
-        products that not only look good but make a measurable impact for our users and clients.
-      </p>
-        </p-accordion-content>
-    </p-accordion-panel>
-
-    <p-accordion-panel value="1">
-        <p-accordion-header>💡 Our Vision</p-accordion-header>
-        <p-accordion-content>
-            <p class="m-0">
-                We envision a world where innovation and empathy work hand in hand to drive progress. Our goal is to
-        create tools and experiences that help businesses operate smarter, teams collaborate better, and customers
-        feel more connected.  
-        <br><br>
-        As we move forward, we’re committed to shaping a future where technology adapts to human needs — not
-        the other way around. Every step we take is guided by curiosity, creativity, and a relentless pursuit
-        of better solutions.
+              with their audiences. We believe technology should simplify life, not complicate it — and every solution
+              we create is designed with people at the center.
+              <br><br>
+              From concept to launch, our focus is on usability, accessibility, and sustainability. We aim to deliver
+              products that not only look good but make a measurable impact for our users and clients.
             </p>
-        </p-accordion-content>
-    </p-accordion-panel>
+          </p-accordion-content>
+        </p-accordion-panel>
 
-    <p-accordion-panel value="2">
-        <p-accordion-header>🤝 Our Values</p-accordion-header>
-        <p-accordion-content>
+        <p-accordion-panel value="1">
+          <p-accordion-header>💡 Our Vision</p-accordion-header>
+          <p-accordion-content>
             <p class="m-0">
-               Our values define who we are and how we work. We believe in transparency, integrity, and collaboration.
-        Every idea, big or small, deserves to be heard — and every person on our team contributes to the success
-        of our shared vision.  
-        <br><br>
-        We care deeply about craftsmanship, continuous learning, and treating every challenge as an opportunity
-        to grow. Above all, we value our relationships — with our clients, our colleagues, and our community.
-      </p>
-        </p-accordion-content>
-    </p-accordion-panel>
-</p-accordion>
+              We envision a world where innovation and empathy work hand in hand to drive progress. Our goal is to
+              create tools and experiences that help businesses operate smarter, teams collaborate better, and customers
+              feel more connected.
+              <br><br>
+              As we move forward, we’re committed to shaping a future where technology adapts to human needs — not
+              the other way around. Every step we take is guided by curiosity, creativity, and a relentless pursuit
+              of better solutions.
+            </p>
+          </p-accordion-content>
+        </p-accordion-panel>
+
+        <p-accordion-panel value="2">
+          <p-accordion-header>🤝 Our Values</p-accordion-header>
+          <p-accordion-content>
+            <p class="m-0">
+              Our values define who we are and how we work. We believe in transparency, integrity, and collaboration.
+              Every idea, big or small, deserves to be heard — and every person on our team contributes to the success
+              of our shared vision.
+              <br><br>
+              We care deeply about craftsmanship, continuous learning, and treating every challenge as an opportunity
+              to grow. Above all, we value our relationships — with our clients, our colleagues, and our community.
+            </p>
+          </p-accordion-content>
+        </p-accordion-panel>
+      </p-accordion>
+    </div>
+  </section>
+
 </div>
-</section>
-     
- </div>
