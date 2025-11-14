@@ -1,0 +1,73 @@
+
+.gap-1{
+    gap: 1em;
+    display: flex;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import "primeicons/primeicons.css";
+
+
+
+
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: var(--p-font-family);
+  background-color: var(--p-surface-0);
+  color: var(--p-text-color);
+}
+
+.p-toolbar {
+  border-radius: 0;
+}
+
+.p-datatable-table-container,.dataheadtab .p-datatable-header{
+    margin: 10px 0  10px 0 !important;
+    border-radius: 1rem !important;
+}
+.themebtn .p-button {
+      background: #b018e3 !important;
+    border: 1px solid #7f15a2 !important;
+}
+.loginbutton .p-button-success{
+  background: #150764 !important;
+    border: 1px solid #150761 !important;
+    color: var(--p-button-success-color) !important;
+}
+.signinbutton .p-button-info{
+  background: var(--p-button-info-background) !important;
+    border: 1px solid var(--p-button-info-border-color) !important;
+    color: var(--p-button-info-color)  !important;
+        // border-radius: var(--p-button-border-radius) !important;
+}
+.p-toolbar{
+  width: 100% !important;
+  background: none !important;
+  border: none !important;
+}
+.viewdetails .p-button{
+background: #0092AD !important;
+}
+.dark-mode .navbar-menu a{
+  color: white;
+}
+.navbar-menu a{
+  color: white;
+}
+.no-home a{
+color: rgb(0, 0, 0);
+}
+.p-button-success:focus-visible,.p-button-success:not(:disabled):active{
+  border: none !important;
+}
+.p-password .p-inputtext {
+background: none !important;
+border: none !important;
+color: 
+ color-mix(in srgb, var(--p-primary-50) calc(100% * var(--tw-text-opacity, 1)), transparent) !important;
+
+}

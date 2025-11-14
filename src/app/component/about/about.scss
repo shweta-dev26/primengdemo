@@ -1,0 +1,265 @@
+ .container { display: flex; flex-direction: column; gap: 50px; padding: 20px; }
+    .top-section { display: flex; justify-content: space-between; align-items: center; }
+    .images { display: flex; gap: 20px; }
+    .move-to-bottom {
+      position: absolute;
+      transition: all 2s ease;
+      transform: translateY(200px); 
+    }
+
+    .bottom-section { position: relative; min-height: 150px; }
+    .bottom-placeholder { margin-top: 20px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .main-content {
+      max-width: 1080px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
+
+    /* About Us Section */
+    .about-us {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .about-text {
+      flex: 1 1 320px;
+      max-width: 480px;
+    }
+    .about-text h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      color: #222;
+    }
+    .about-text p {
+      font-size: 1.15rem;
+      line-height: 1.5;
+      color: #555;
+    }
+
+    /* Image Collage */
+    .image-collage {
+      position: relative;
+      flex: 1 1 320px;
+      max-width: 360px;
+      height: 260px;
+      min-width: 300px;
+    }
+    .image-collage img {
+      border-radius: 8px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+      border: 4px solid white;
+      object-fit: cover;
+      position: absolute;
+      transition: transform 0.3s ease;
+    }
+    .main-image {
+      width: 220px;
+      height: 220px;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+    .small-image {
+      width: 110px;
+      height: 110px;
+      z-index: 3;
+    }
+    .top-right {
+      top: 12px;
+      right: 0;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+    .bottom-left {
+      bottom: 0;
+      left: 130px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+    }
+    .bottom-right {
+      bottom: 0;
+      right: 0;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.20);
+    }
+    .image-collage img:hover {
+      transform: scale(1.06);
+      z-index: 10;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+    }
+
+    /* Mission Section */
+    .mission {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    .ourmission-section {
+      flex: 1 1 360px;
+      max-width: 480px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      object-fit: cover;
+      height: 260px;
+      background: #150764;
+    }
+    .mission-image{
+        position: absolute;
+    }
+    .mission-text {
+      flex: 1 1 360px;
+      max-width: 480px;
+    }
+    .mission-text h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #222;
+    }
+    .mission-text p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: #444;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .about-us, .mission {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .image-collage, .mission-image {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        position: static !important;
+      }
+      .image-collage img {
+        position: relative !important;
+        margin-bottom: 16px;
+        border: none;
+        box-shadow: none;
+        border-radius: 6px;
+        width: 100% !important;
+        height: auto !important;
+      }
+    }
+
+
+    .floating-image {
+      position: fixed !important;
+      z-index: 9999 !important;
+      border-radius: 8px;
+      pointer-events: none;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+      transition: transform 1.2s ease-in-out;
+      will-change: transform;
+    }
+    .hidden {
+      visibility: hidden !important;
+    }
+    .ourmission-section{
+
+    }
+
+  .neon-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+  background: transparent;
+}
+
+/* Container with moving border */
+.neon-border {
+  position: relative;
+  border-radius: 16px;
+  padding: 24px;
+  background: #fff;
+  overflow: hidden;
+}
+
+/* Border animation layer */
+.neon-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(
+    90deg,
+    #1a004b,
+    #0ea5e9,
+    #0284c7,
+    #1a004b
+  );
+  background-repeat: no-repeat;
+  background-size: 300% 300%;
+  animation: moveNeon 3s linear infinite;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Moving gradient animation */
+@keyframes moveNeon {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Optional glow halo */
+.neon-border::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: inherit;
+  filter: blur(8px);
+  opacity: 0.6;
+  animation: moveNeon 3s linear infinite;
+  pointer-events: none;
+}
+
+/* Keep accordion readable */
+.neon-border > * {
+  position: relative;
+  z-index: 1;
+  border-radius: 12px;
+}

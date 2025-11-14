@@ -1,0 +1,112 @@
+
+
+
+
+<!-- <div class="mb-4 p-8 flex items-center justify-center">
+    <p-card [style]="{ width: '25rem', overflow: 'hidden' }" >
+        <ng-template #header>
+            <img alt="Card" class="w-full" src="assets/card-ng.jpg" />
+        </ng-template>
+        <ng-container>
+        <ng-template #title let-card>{{card?.title}}</ng-template>
+        <ng-template #subtitle let-card>{{card?.subtitle}}</ng-template>
+        
+        </ng-container>
+        <ng-template #footer>
+            <div class="flex gap-4 mt-1">
+                <p-button label="Cancel" severity="secondary" class="w-full" [outlined]="true" styleClass="w-full" />
+                <p-button label="Save" class="w-full" styleClass="w-full" />
+            </div>
+        </ng-template>
+    </p-card>
+</div> -->
+
+
+
+<!-- <div class="mb-4 p-8 flex items-center  gap-4" >
+  <p-card [style]="{ width: '17rem', overflow: 'hidden' }" *ngFor="let card of reportcard">
+    
+    <ng-template #header>
+      <img alt="Card" class="w-full" src="assets/card-ng.jpg" />
+    </ng-template>
+    
+    
+    <div >  
+      <h2>  
+      <span class="text-lg font-bold">{{ card.title }}</span></h2>
+      <p class="mt-1 mb-1">{{ card.subtitle }}</p>
+    </div>
+    
+    <ng-template #footer>
+      <div class="flex gap-4 mt-1">
+        <p-button label="Cancel" severity="secondary" class="w-full" [outlined]="true" styleClass="w-full" />
+        <p-button label="Details" [routerLink]="card.link"   class="w-full" styleClass="w-full" />
+      </div>
+    </ng-template>
+    
+  </p-card>
+</div> -->
+
+
+<!-- <div class="page-container">
+  <header class="header">
+    <div class="logo">Your Logo</div>
+    <nav class="nav-links">
+      <a href="#" class="nav-link">HOME</a>
+      <a href="#" class="nav-link">OUR TEAM</a>
+      <a href="#" class="nav-link">PROJECTS</a>
+      <a href="#" class="nav-link">ABOUT US</a>
+      <button pButton type="button" label="SIGN IN" class="sign-in-btn p-button-rounded"></button>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <div class="error-illustration">
+      <h1 class="error-code">404</h1>
+      <p class="error-message">Page Not Found</p>
+    </div>
+    <p class="error-description">
+      The page you are looking for might have been removed or is temporarily unavailable.
+    </p>
+    <button pButton type="button" label="Go to Homepage" class="p-button-outlined p-button-lg" ></button>
+  </main>
+</div> -->
+
+<div class="landing-page-container">
+    <video  autoplay muted loop playsinline class="bg-video">
+  <source src="assets/background.mp4" type="video/mp4" />
+</video>
+
+    <!-- <div class="fluid-shape-1"></div>
+  <div class="fluid-shape-2"></div>
+  <div class="fluid-shape-3"></div> -->
+  <header class="header" >
+    <app-navbar [darkMode]="darkMode" style="width: -webkit-fill-available;" (toggleTheme)="toggleTheme()"></app-navbar>
+  
+    
+  </header>
+
+  <main class="main-content justify-center">
+  <div class="card-container" *ngFor="let card of reportcard">
+    <p-card [style]="{ width: '25rem', overflow: 'hidden' }" styleClass="custom-card">
+     
+
+      <ng-template pTemplate="title">
+        <i class="pi pi-bolt" style="color: gold; margin-right: 8px;"></i>
+       {{card.title}}
+      </ng-template>
+
+      <ng-template pTemplate="subtitle">
+         {{card.subtitle}}
+      </ng-template>
+
+      <ng-template pTemplate="footer">
+        <div class="flex justify-center mt-2">
+            <p-button label="View Details" class="viewdetails" [routerLink]="card.link" icon="pi pi-eye" ></p-button>
+        </div>
+      </ng-template>
+    </p-card>
+  </div>
+
+  </main>
+</div>

@@ -1,0 +1,16 @@
+.navbar-links{
+  display: inline-flex;
+    cursor: pointer;
+    align-items: center;
+    line-height: 1.5rem;
+    text-decoration: none;
+}
+.navbar-menu{
+    display: flex;
+    gap: 2.5em;
+    
+}
+
+.justify-between{
+  justify-content: flex-end;
+}
