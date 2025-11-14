@@ -2,11 +2,11 @@
    ' z-index': '1'}" c>
     <ng-template #start>
         <div class="flex items-center gap-2 navbar-menu" [class.no-home]="router.url!=='/'">
-          <img src="logo-mobile.svg">
-            <a href="" class="navbar-links" [routerLink]="['/product']">COSMATIC</a>
-            <a href="" class="navbar-links" [routerLink]="['/electronic']">ELECTRONIC</a>
-            <a href="" class="navbar-links">ASSOCIATIONS</a>
-            <a href="" class="navbar-links" [routerLink]="['/about']">ABOUT US</a>
+          <img src="logo-mobile.svg" [routerLink]="['/']">
+            <a  class="navbar-links" [routerLink]="['/product']">COSMATIC</a>
+            <a  class="navbar-links" [routerLink]="['/electronic']">ELECTRONIC</a>
+            <a class="navbar-links">ASSOCIATIONS</a>
+            <a  class="navbar-links" [routerLink]="['/about']">ABOUT US</a>
         </div>
     </ng-template>
 

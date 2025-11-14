@@ -1,0 +1,8 @@
+[build]
+  command = "ng build --configuration production"
+  publish = "dist/primengdemo" # Replace with your Angular project name from angular.json
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
